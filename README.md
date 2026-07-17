@@ -12,7 +12,7 @@
 
 ## Screenshot
 
-> *Add a screenshot here — open nvim, take a shot with your terminal, drop it in the repo as `assets/screenshot.png`*
+![Screenshot](assets/screenshot.png)
 
 ---
 

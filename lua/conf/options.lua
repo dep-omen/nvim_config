@@ -40,3 +40,20 @@ opt.undofile       = true
 -- No swap files cluttering your project dirs
 opt.swapfile       = false
 opt.backup         = false
+
+-- Auto-set makeprg for C files based on current filename
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "c",
+    callback = function()
+        local filename = vim.fn.expand("%:t:r")   -- filename without extension
+        vim.opt.makeprg = "gcc % -o " .. filename
+    end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "cpp",
+    callback = function()
+        local filename = vim.fn.expand("%:t:r")
+        vim.opt.makeprg = "g++ % -o " .. filename
+    end,
+})

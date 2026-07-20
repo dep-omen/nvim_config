@@ -42,6 +42,14 @@ map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",   { desc = "Live grep" })
 map("n", "<leader>fb", "<cmd>Telescope buffers<CR>",     { desc = "Buffers" })
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>",   { desc = "Help tags" })
 
+
+map("n", "<S-l>", "<cmd>bnext<CR>",     { desc = "Next buffer" })
+map("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Prev buffer" })
+map("n", "<leader>x", "<cmd>bdelete<CR>", { desc = "Close buffer" })
+
+
+-- Esc exits terminal mode
+map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 -- ── LSP (set in lsp.lua on_attach, listed here for reference) ─────────────
 -- gd  → go to definition
 -- gr  → go to references
